@@ -168,13 +168,15 @@
 }
 
 - (RLMDecimal128 *)decimalNumberBySubtracting:(RLMDecimal128 *)decimalNumber {
-    auto rhs = RLMObjcToDecimal128(decimalNumber);
-    return [[RLMDecimal128 alloc] initWithDecimal128:_value-rhs];
+    // auto rhs = RLMObjcToDecimal128(decimalNumber);
+    // return [[RLMDecimal128 alloc] initWithDecimal128:_value-rhs];
+    @throw RLMException(@"not implemented");
 }
 
 - (RLMDecimal128 *)decimalNumberByMultiplyingBy:(RLMDecimal128 *)decimalNumber {
-    auto rhs = RLMObjcToDecimal128(decimalNumber);
-    return [[RLMDecimal128 alloc] initWithDecimal128:_value*rhs];
+    // auto rhs = RLMObjcToDecimal128(decimalNumber);
+    // return [[RLMDecimal128 alloc] initWithDecimal128:_value*rhs];
+    @throw RLMException(@"not implemented");
 }
 
 - (BOOL)isGreaterThan:(RLMDecimal128 *)decimalNumber {
