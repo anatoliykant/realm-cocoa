@@ -92,6 +92,8 @@ Pod::Spec.new do |s|
                                 'OTHER_CPLUSPLUSFLAGS' => '-isystem "${PODS_ROOT}/Realm/include/core" -fvisibility-inlines-hidden',
                                 'OTHER_CPLUSPLUSFLAGS[arch=armv7]' => '-isystem "${PODS_ROOT}/Realm/include/core" -fvisibility-inlines-hidden -fno-aligned-new',
                                 'USER_HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/Realm/include" "${PODS_ROOT}/Realm/include/Realm"',
+                                'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
+                                'ONLY_ACTIVE_ARCH' => 'YES',
                               }
   s.preserve_paths          = %w(build.sh include)
 
